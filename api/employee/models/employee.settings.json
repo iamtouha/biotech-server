@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "name": "employee",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "post": {
+      "type": "enumeration",
+      "enum": [
+        "officer",
+        "area_manager",
+        "regional_sales_manager",
+        "director"
+      ],
+      "default": "officer",
+      "required": true
+    },
+    "area": {
+      "type": "text"
+    },
+    "user": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "employee"
+    },
+    "am": {
+      "model": "employee"
+    },
+    "rsm": {
+      "model": "employee"
+    },
+    "md": {
+      "model": "employee"
+    }
+  }
+}

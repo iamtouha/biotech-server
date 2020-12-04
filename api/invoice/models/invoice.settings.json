@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "name": "invoice",
+    "description": "Orders and invoices"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "index": {
+      "type": "integer",
+      "min": 0,
+      "unique": true
+    },
+    "dealer": {
+      "via": "invoices",
+      "model": "dealer"
+    },
+    "officer": {
+      "model": "employee"
+    },
+    "items": {
+      "collection": "invoice-item",
+      "via": "invoice"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    },
+    "cash_toal": {
+      "type": "decimal",
+      "min": 0,
+      "default": 0
+    },
+    "credit_total": {
+      "default": 0,
+      "min": 0,
+      "type": "decimal"
+    }
+  }
+}

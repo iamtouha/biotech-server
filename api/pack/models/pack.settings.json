@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packs",
+  "info": {
+    "name": "pack"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "size": {
+      "type": "string"
+    },
+    "cash_rate": {
+      "type": "decimal",
+      "required": false,
+      "default": 0,
+      "min": 0
+    },
+    "credit_rate": {
+      "type": "decimal",
+      "default": 0,
+      "min": 0,
+      "required": false
+    },
+    "product": {
+      "model": "product",
+      "via": "packs"
+    }
+  }
+}

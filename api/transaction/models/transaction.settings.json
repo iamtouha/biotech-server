@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "transaction"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "mr_no": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "dealer": {
+      "via": "transactions",
+      "model": "dealer"
+    },
+    "officer": {
+      "model": "employee"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    },
+    "summary": {
+      "type": "text"
+    },
+    "amount": {
+      "type": "decimal",
+      "min": 1,
+      "required": true
+    }
+  }
+}

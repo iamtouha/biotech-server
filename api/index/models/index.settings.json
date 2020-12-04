@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "indices",
+  "info": {
+    "name": "index",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "invoice": {
+      "type": "integer",
+      "min": 1
+    },
+    "dealer": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    }
+  }
+}

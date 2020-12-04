@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoice_items",
+  "info": {
+    "name": "invoice_item"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "invoice": {
+      "via": "items",
+      "model": "invoice"
+    },
+    "pack": {
+      "model": "pack"
+    },
+    "units": {
+      "type": "decimal",
+      "min": 0.1,
+      "default": 1,
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "cash",
+        "credit"
+      ]
+    },
+    "rate": {
+      "type": "decimal",
+      "min": 1,
+      "required": true
+    }
+  }
+}

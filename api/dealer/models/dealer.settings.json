@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dealers",
+  "info": {
+    "name": "Dealer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "index": {
+      "type": "integer",
+      "unique": true,
+      "min": 1,
+      "required": false
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "minLength": 14
+    },
+    "officer": {
+      "model": "employee"
+    },
+    "invoices": {
+      "collection": "invoice",
+      "via": "dealer"
+    },
+    "transactions": {
+      "collection": "transaction",
+      "via": "dealer"
+    }
+  }
+}
