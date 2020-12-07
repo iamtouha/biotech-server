@@ -26,8 +26,8 @@
       "required": false
     },
     "product": {
-      "model": "product",
-      "via": "packs"
+      "via": "packs",
+      "model": "product"
     }
   }
 }

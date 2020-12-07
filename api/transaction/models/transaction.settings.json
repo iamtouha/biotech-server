@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "transactions",
   "info": {
-    "name": "transaction"
+    "name": "transaction",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,8 +17,8 @@
       "required": true
     },
     "dealer": {
-      "via": "transactions",
-      "model": "dealer"
+      "model": "dealer",
+      "via": "transactions"
     },
     "officer": {
       "model": "employee"
@@ -33,6 +34,9 @@
       "type": "decimal",
       "min": 1,
       "required": true
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

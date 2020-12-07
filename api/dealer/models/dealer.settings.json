@@ -33,12 +33,12 @@
       "model": "employee"
     },
     "invoices": {
-      "collection": "invoice",
-      "via": "dealer"
+      "via": "dealer",
+      "collection": "invoice"
     },
     "transactions": {
-      "collection": "transaction",
-      "via": "dealer"
+      "via": "dealer",
+      "collection": "transaction"
     }
   }
 }

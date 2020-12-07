@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
-    "name": "product"
+    "name": "product",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,8 +17,11 @@
       "unique": true
     },
     "packs": {
-      "via": "product",
-      "collection": "pack"
+      "collection": "pack",
+      "via": "product"
+    },
+    "director": {
+      "model": "employee"
     }
   }
 }

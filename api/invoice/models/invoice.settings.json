@@ -17,8 +17,8 @@
       "unique": true
     },
     "dealer": {
-      "via": "invoices",
-      "model": "dealer"
+      "model": "dealer",
+      "via": "invoices"
     },
     "officer": {
       "model": "employee"
@@ -31,7 +31,7 @@
       "type": "boolean",
       "default": false
     },
-    "cash_toal": {
+    "cash_total": {
       "type": "decimal",
       "min": 0,
       "default": 0
@@ -40,6 +40,9 @@
       "default": 0,
       "min": 0,
       "type": "decimal"
+    },
+    "confirm_date": {
+      "type": "date"
     }
   }
 }
