@@ -9,10 +9,10 @@ module.exports = {
   lifecycles: {
     beforeCreate: async function (data) {
       const indexesObj = (await strapi.query("index").find())[0];
-      const index = indexesObj.invoice;
+      const index = indexesObj.dealer;
       await strapi
         .query("index")
-        .update({ id: indexesObj._id }, { invoice: index + 1 });
+        .update({ id: indexesObj._id }, { dealer: index + 1 });
       data.index = index;
     },
   },
