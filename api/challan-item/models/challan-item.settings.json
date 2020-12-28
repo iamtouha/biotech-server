@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "challan_items",
+  "info": {
+    "name": "challan_item"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "pack": {
+      "model": "pack"
+    },
+    "units": {
+      "type": "decimal",
+      "min": 0.1,
+      "required": true
+    },
+    "challan": {
+      "model": "challan",
+      "via": "items"
+    }
+  }
+}

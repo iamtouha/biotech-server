@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "challans",
+  "info": {
+    "name": "challan"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "index": {
+      "type": "integer",
+      "min": 1,
+      "unique": true
+    },
+    "area_manager": {
+      "model": "employee"
+    },
+    "date": {
+      "type": "date"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": true
+    },
+    "items": {
+      "via": "challan",
+      "collection": "challan-item"
+    }
+  }
+}

@@ -17,8 +17,11 @@
     },
     "dealer": {
       "type": "integer",
-      "min": 1,
-      "required": true
+      "min": 1
+    },
+    "challan": {
+      "type": "integer",
+      "min": 1
     }
   }
 }

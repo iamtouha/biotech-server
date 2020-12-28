@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/challan-items",
+      "handler": "challan-item.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/challan-items/count",
+      "handler": "challan-item.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/challan-items/:id",
+      "handler": "challan-item.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/challan-items",
+      "handler": "challan-item.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/challan-items/:id",
+      "handler": "challan-item.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/challan-items/:id",
+      "handler": "challan-item.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
