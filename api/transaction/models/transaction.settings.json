@@ -17,8 +17,8 @@
       "required": true
     },
     "dealer": {
-      "model": "dealer",
-      "via": "transactions"
+      "via": "transactions",
+      "model": "dealer"
     },
     "officer": {
       "model": "employee"

@@ -17,8 +17,8 @@
       "unique": true
     },
     "dealer": {
-      "model": "dealer",
-      "via": "invoices"
+      "via": "invoices",
+      "model": "dealer"
     },
     "officer": {
       "model": "employee"

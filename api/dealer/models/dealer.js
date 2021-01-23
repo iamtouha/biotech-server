@@ -13,7 +13,7 @@ module.exports = {
       await strapi
         .query("index")
         .update({ id: indexesObj._id }, { dealer: index + 1 });
-      data.index = index;
+      data.index = index + 1;
     },
   },
 };
