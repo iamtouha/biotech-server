@@ -16,10 +16,6 @@
       "min": 0,
       "unique": true
     },
-    "dealer": {
-      "via": "invoices",
-      "model": "dealer"
-    },
     "officer": {
       "model": "employee"
     },
@@ -43,6 +39,10 @@
     },
     "confirm_date": {
       "type": "date"
+    },
+    "dealer": {
+      "model": "dealer",
+      "via": "invoices"
     }
   }
 }

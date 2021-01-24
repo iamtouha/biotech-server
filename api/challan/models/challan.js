@@ -15,5 +15,15 @@ module.exports = {
         .update({ id: indexesObj._id }, { challan: index + 1 });
       data.index = index;
     },
+    afterDelete: async (result) => {
+      try {
+        const promises = result.items.map((item) => {
+          return strapi.query("challan-item").delete({ id: item.id });
+        });
+        await Promise.all(promises);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };

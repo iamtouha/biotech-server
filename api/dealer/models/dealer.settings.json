@@ -33,13 +33,13 @@
     "officer": {
       "model": "employee"
     },
-    "invoices": {
-      "collection": "invoice",
-      "via": "dealer"
-    },
     "transactions": {
       "collection": "transaction",
       "via": "dealer"
+    },
+    "invoices": {
+      "via": "dealer",
+      "collection": "invoice"
     }
   }
 }
