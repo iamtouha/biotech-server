@@ -17,8 +17,8 @@
       "required": true
     },
     "dealer": {
-      "via": "transactions",
-      "model": "dealer"
+      "model": "dealer",
+      "via": "transactions"
     },
     "officer": {
       "model": "employee"
@@ -36,7 +36,7 @@
       "required": true
     },
     "date": {
-      "type": "date"
+      "type": "datetime"
     }
   }
 }

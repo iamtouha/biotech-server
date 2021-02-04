@@ -37,8 +37,8 @@
       "min": 0,
       "type": "decimal"
     },
-    "confirm_date": {
-      "type": "date"
+    "confirmed_at": {
+      "type": "datetime"
     },
     "dealer": {
       "model": "dealer",

@@ -34,8 +34,8 @@
       "model": "employee"
     },
     "transactions": {
-      "collection": "transaction",
-      "via": "dealer"
+      "via": "dealer",
+      "collection": "transaction"
     },
     "invoices": {
       "via": "dealer",
